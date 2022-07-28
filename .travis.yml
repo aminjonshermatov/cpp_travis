@@ -12,6 +12,8 @@ script:
   - cmake --build .
   - cmake --build . --target test
   - cmake --build . --target package
+before_deploy:
+  - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.8.0
 deploy:
   provider: releases
   api_key: $GITHUB_AUTH_KEY
