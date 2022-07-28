@@ -2,14 +2,14 @@
 // Created by aminjon on 7/28/22.
 //
 
-#define BOOST_TEST_MODULE helloworld_test_module
+#define BOOST_TEST_MODULE cmake_travis_test_module
 
 #include "lib.h"
 #include <boost/test/unit_test.hpp>
 
-BOOST_AUTO_TEST_SUITE(hello_test_suite)
+BOOST_AUTO_TEST_SUITE(cmake_travis_test_suite)
 
-BOOST_AUTO_TEST_CASE(hello_test_version) {
+BOOST_AUTO_TEST_CASE(cmake_travis_test_version) {
     BOOST_CHECK(version() > 0);
 }
 
