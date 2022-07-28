@@ -13,7 +13,9 @@ script:
   - cmake --build . --target test
   - cmake --build . --target package
 deploy:
-  provider: script
+  provider: releases
+  api_key: $GITHUB_AUTH_KEY
+  file: cmake_travis-0.0.9$TRAVIS_BUILD_NUMBER-Linux.deb
   skip_cleanup: true
-  script:
-    - curl -f -T cmake_travis-0.0.9$TRAVIS_BUILD_NUMBER-Linux.deb -uaminjonshermatov:$BINTRAY_API_KEY "https://api.bintray.com/content/aminjonshermatov/cpp_travis/$TRAVIS_BUILD_NUMBER/cmake-0.0.9$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=xenial;deb_component=main;deb_architecture=amd64;publish=1"
+  on:
+    tags: true
