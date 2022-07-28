@@ -6,11 +6,7 @@
 #define CMAKE_TRAVIS_LIB_H
 
 
-namespace lib {
-
 int version();
-
-};
 
 
 #endif //CMAKE_TRAVIS_LIB_H

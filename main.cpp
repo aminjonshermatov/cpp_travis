@@ -2,7 +2,7 @@
 #include "lib.h"
 
 int main() {
-    std::cout << "from lib: " << lib::version() << std::endl;
+    std::cout << "from lib: " << version() << std::endl;
 
     return 0;
 }

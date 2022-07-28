@@ -10,7 +10,7 @@
 BOOST_AUTO_TEST_SUITE(hello_test_suite)
 
 BOOST_AUTO_TEST_CASE(hello_test_version) {
-    BOOST_CHECK(lib::version() > 0);
+    BOOST_CHECK(version() > 0);
 }
 
 BOOST_AUTO_TEST_SUITE_END()
