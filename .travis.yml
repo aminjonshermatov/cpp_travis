@@ -17,3 +17,5 @@ deploy:
   api_key: $GITHUB_AUTH_KEY
   file: cmake_travis-0.0.9$TRAVIS_BUILD_NUMBER-Linux.deb
   skip_cleanup: true
+  on:
+    master: true
