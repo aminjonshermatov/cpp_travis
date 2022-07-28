@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.0)
 project(cmake_travis VERSION 0.0.9$ENV{TRAVIS_BUILD_NUMBER})
 
 find_package(Threads REQUIRED)
